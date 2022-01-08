@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color:inherit;
+}
+
+h2, a, figcaption i, figure {
+    font-size: calc(24px + (2 + 16*0.7)*((10vw - 320px)/1280));
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+i, figcaption i {
+    font-weight: 600;
+}
+
+.wordInfo {
+    width: 70%;
+    margin: 50px auto;
+    text-align:justify;
+    box-shadow: 0px 0px 16px 11px rgb(140 137 141 / 22%);
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.wordLink {
+    text-align: center;
+    display: block;
+}
+
+.wordLink b {
+    font-size: 30px;
+    color: #6737c5f0;
+    text-transform: uppercase;
+}
+
+.wordDefinitions {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+    column-gap: 25px;
+    justify-items: center;
+    outline: 3px outset rgb(140 137 141 / 22%);
+    margin-bottom: 10px;
+}
+
+.wordDefinitions h2 {
+    padding: 8px;
+}
+
+.phonetics {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+
+    /*justify-content: flex-start;
+    column-gap: 55px;*/
+}

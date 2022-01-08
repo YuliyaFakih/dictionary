@@ -1,0 +1,9 @@
+.spinner {
+    margin: 15px auto;
+    width: 70px;
+    height: 70px;
+}
+
+.spinnerContainer {
+    margin-top: 50px;
+}
