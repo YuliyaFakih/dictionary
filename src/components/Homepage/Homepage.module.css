@@ -53,3 +53,29 @@ h2, .languages p, .searchInput, .searchInput::placeholder, .selectLanguage {
 .loading, .error {
     margin-top: 50px;
 }
+
+@media (max-width: 425px) {
+    .searchForm {
+        column-gap: 20px;
+        padding: 50px;
+    }
+    .searchInput::placeholder {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 375px) {
+    .searchForm {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 320px) {
+    .searchInput {
+        width: 100%;
+    }
+    .searchInput::placeholder {
+        opacity: 0;
+    }
+}
+

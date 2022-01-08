@@ -10,7 +10,7 @@ export default () => {
     return (
         <div> {word.map(el => (
             <div className={styles.wordInfo}>
-                <NavLink to="/word-to-search" className={styles.wordLink}> <b>{el.word}</b> <br/> <h6>(Tap here to see its meanings)</h6> </NavLink>
+                <NavLink to="/word-to-search" className={styles.wordLink}> <b>{el.word}</b> <br/> <h6>(Tap here to see what it means)</h6> </NavLink>
                     
                 {el.phonetics.map(w => (
                     <div className={styles.phonetics}>
@@ -25,21 +25,19 @@ export default () => {
                         <h2> <i>Part of speech:</i> {w.partOfSpeech}</h2>
                         <h2> <i>Definition:</i> {w.definitions[0].definition}</h2>
                         {w.definitions[0].example ? <h2> <i>Example:</i> {w.definitions[0].example}</h2> : null}
-                        {w.definitions[0].synonyms.length > 0 ? <h2> <i>Synonyms:</i> {w.definitions[0].synonyms.map(x => (
-                            <ul>
+                        {w.definitions[0].synonyms.length > 0 ? <ul><h2> <i>Synonyms:</i></h2> {w.definitions[0].synonyms.map(x => (
+                            <>
                                 <li>{x}</li>
-                            </ul>
-                        ))}</h2> : null }
-                        {w.definitions[0].antonyms.length > 0 ? <h2> <i>Antonyms:</i> {w.definitions[0].antonyms.map(x => (
-                            <ul>
+                            </>
+                        ))}</ul> : null }
+                        {w.definitions[0].antonyms.length > 0 ? <ul><h2> <i>Antonyms:</i></h2> {w.definitions[0].antonyms.map(x => (
+                            <>
                                 <li>{x}</li>
-                            </ul>
-                        ))}</h2> : null }
+                            </>
+                        ))}</ul> : null }
                     </div>
                 ))}
             </div>
         ))} </div>
     )
 }
-
-//<a href={`https://youglish.com/pronounce/`+ el.word +`/english`} > How to pronounce the word </a>
